@@ -1,0 +1,8 @@
+https://stackoverflow.com/questions/16363890/unable-to-copy-paste-in-mingw-shell
+
+This mintty bug CTRL + C & CTRL + V copy paste addresses the issue. It allows normal Control-C, Control-V copy and pasting, but at the expense of changing other control characters. So to stop a process running you need Control-Shift-C, to interrupt it you would need Control-Shift-Z and to send an EOT you need Control-Shift-D. You may find the advantage of windows copy and paste outwights the disadvantages.
+
+The behavior needs a flag to be set in the .minttyrc file. WHich should look like
+
+CtrlShiftShortcuts=yes
+CtrlExchangeShift=yes
